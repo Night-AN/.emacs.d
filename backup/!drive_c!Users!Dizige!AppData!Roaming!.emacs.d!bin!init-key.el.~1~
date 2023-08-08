@@ -1,0 +1,22 @@
+;;FILE init-hydra
+;;AUTHOR: Flute
+;;Description: None
+
+(use-package hydra
+  :ensure t)
+
+(use-package posframe-hydra
+  :after hydra)
+
+(defhydra zoom (global-map"<f2>" :hint nil)
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out")
+  )
+
+
+
+(provide 'init-hydra)
+
+
+

@@ -1,0 +1,6 @@
+* Default
+** .emacs.d
+ - path :: ~/.emacs.d
+* No Tab
+** bin
+ - path :: ~/.emacs.d/bin

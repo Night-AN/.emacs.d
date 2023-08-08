@@ -1,0 +1,39 @@
+
+;;FILE: init-ui.el
+;;AUTHOR: Flute
+;;FUNCTION: This file is an ui configuration
+
+;;menu
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;;line-number-mode
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
+
+(use-package all-the-icons
+  :if(display-graphic-p))
+
+(use-package all-the-icons-ivy)
+(use-package all-the-icons-ivy-rich)
+(use-package all-the-icons-dired)
+
+;;(use-package smart-mode-line
+;;  :ensure t
+;;  :config
+;;  (setq sml/theme 'respectful)
+;;
+;;)
+
+;;theme
+(use-package solarized-theme
+  :ensure t
+  :config
+  (load-theme 'solarized-light-high-contrast))
+
+(use-package dashboard
+  :ensure t)
+
+
+ (provide 'init-ui)

@@ -1,0 +1,19 @@
+;;FILE: config.el
+;;AUTHOR: Flute
+;;Function: This is an config about system or file
+
+;;BackUpFile
+(setq
+     backup-by-copying t
+     backup-directory-alist
+     '(("." . "~/.emacs.d/backup")) 
+     delete-old-versions t
+     kept-new-versions 3
+     kept-old-versions 1
+     version-control t)
+
+;;AutoSave
+(setq-default
+ auto-sae-timeout 15
+ auto-save-interval 100)
+(provide 'config)

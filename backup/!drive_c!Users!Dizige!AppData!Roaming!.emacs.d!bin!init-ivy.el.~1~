@@ -1,0 +1,11 @@
+;;FILE: init-ivy.el
+;;AUTHOR: Flute
+;;FUNCTION: This is an ivy file
+
+(use-package ivy
+  :ensure t
+  )
+(use-package counsel)
+
+
+(provide 'init-ivy)

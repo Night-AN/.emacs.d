@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.html</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">{{Message}}</div>
+    <script>
+      const {createApp} = vue
+      createapp({
+        data(){
+         return{
+      message:'hello vue!'
+      }}}).mount('#app')
+    </script>
+  </Body>
+</html>

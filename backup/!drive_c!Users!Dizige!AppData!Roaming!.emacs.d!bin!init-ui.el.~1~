@@ -1,0 +1,13 @@
+;;FILE: init-ui.el
+;;AUTHOR: Flute
+;;FUNCTION: This file is an ui configuration
+
+;;bar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
+;;line-number-mode
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
+
+(provide 'init-ui)

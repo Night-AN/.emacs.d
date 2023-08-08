@@ -1,0 +1,15 @@
+;;FILE init-hydra
+;;AUTHOR: Flute
+;;Description: None
+
+(use-package hydra
+  :ensure t)
+
+(defhydra menu (global-map "<f2>")
+  "other"
+  ("o" zoom/body "zoom"))
+(defhydra zoom ()
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out")
+ )

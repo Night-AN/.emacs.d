@@ -1,0 +1,14 @@
+;;FILE init-hydra
+;;AUTHOR: Flute
+;;Description: None
+
+(use-package hydra
+  :ensure t)
+
+
+(global-set-key (kbd "C-c h") 'menu/body)
+
+(use-package which-key
+  :ensure t)
+
+(provide 'init-key)

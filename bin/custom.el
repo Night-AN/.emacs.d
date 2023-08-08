@@ -1,0 +1,14 @@
+;;FILE: custom.el
+;;AUTHOR: Flute4
+;;Description: Null
+
+(custom-set-variables
+
+
+ )
+
+(custom-set-faces
+
+ )
+
+(provide 'custom)

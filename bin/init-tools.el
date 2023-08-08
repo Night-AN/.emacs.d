@@ -1,0 +1,15 @@
+;;FILE: init-tools.el
+;;AUTHOR: Flute
+;;FUNCRION: This is an file of ivy counsel swiper
+
+;;(setq url-proxy-services '(("https" . "127.0.0.1:10809")))
+(use-package smartparens
+  :ensure t
+  :hook
+  (prog-mode . smartparens-mode))
+
+(use-package projectile
+  :ensure t)
+
+
+(provide 'init-tools)
