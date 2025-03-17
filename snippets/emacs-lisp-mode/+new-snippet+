@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: elisp header
+# key: eheader
+# --
+;;; ${1:`(file-name-nondirectory (buffer-file-name))`} --- ${2:Description} -*- lexical-binding: t -*-
+
+;; Copyright (C) ${3:`(format-time-string "%Y")`} ${4:Your Name}
+
+;; Author: Shaw <2754781659@qq.com>
+;; Version: 0.1
+
+;;; Commentary:
+;; ${5:Detailed description}
+
+;;; Code:
+
+$0
+
+(provide '${6:`(file-name-base (buffer-file-name))`})
+;;; ${1:`(file-name-nondirectory (buffer-file-name))`} ends here
