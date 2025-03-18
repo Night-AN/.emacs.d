@@ -17,7 +17,7 @@
   :config
   (unless (file-exists-p "~/.emacs.d/.cache")
     (make-directory "~/.emacs.d/.cache"))
-  ((setq amx-save-file "~/.emacs.d/.cache/amx-items"))
+  ((setq amx-save-file "~/.emacs.d/.cache/amx-items")
   )
 
 ;; Switch window
@@ -36,8 +36,8 @@
 (use-package smart-mode-line
   :ensure t
   :init (sml/setup)
-  (setq sml/no-confirm-load-theme t)
-  (setq sml/theme 'dark)
+  (setq sml/no-confirm-load-theme nil)
+  (setq sml/theme 'light)
   )
 
 ;; marginalia
@@ -63,7 +63,7 @@
   (("C-." . embark-act)         ;; pick some comfortable binding
    ("C-;" . embark-dwim)        ;; good alternative: M-.
    ("C-h B" . embark-bindings))) ;; alternative for `describe-bindings'
-
+ 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
   :ensure t
@@ -73,7 +73,7 @@
  (use-package dashboard
   :ensure t
   :config
-  (setq dashboard-banner-logo-title "Welcome to Emacs!")
+  (setq dashboard-banner-logo-title "Fuck U Jetbrains")
   (setq dashboard-startup-banner 'official)
   (setq dashboard-items '((recents  . 5)
 			  (bookmarks . 5)

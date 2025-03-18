@@ -19,9 +19,9 @@
 (require 'init-snippet)
 (require 'init-swiper)
 (require 'init-company)
-(require 'init-treemacs)
 (require 'init-projectile)
-
+(require 'init-treemacs
+)
 
 (provide 'init)
 
@@ -38,9 +38,10 @@
      "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa"
      default))
  '(package-selected-packages
-   '(amx company-tabnine counsel counsel-projectile dashboard embark
-	 lsp-java marginalia projectile rainbow-delimiters
-	 smart-mode-line undo-tree yasnippet)))
+   '(amx company-box company-lsp company-tabnine counsel
+	 counsel-projectile dashboard embark flycheck lsp-java lsp-ui
+	 marginalia projectile rainbow-delimiters smart-mode-line
+	 undo-tree yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

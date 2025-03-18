@@ -1,7 +1,10 @@
 elpa/
 auto-save-list/
+workspace/
 .cache/
 amx-items
 history
 projectile-bookmarks.eld
 recentf
+.lsp-session-v1
+request/
