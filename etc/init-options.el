@@ -10,7 +10,7 @@
 (fset 'yes-or-no-p'y-or-n-p)
 
 ;; Set Default Fonts
-(set-face-attribute 'default nil :font "Consolas-12")
+(set-face-attribute 'default nil :font "Fira Code")
 (set-fontset-font t 'han "Microsoft YaHei")
 
 ;; Set Language Environment
@@ -27,7 +27,7 @@
     (progn
       (menu-bar-mode 1)
       (tool-bar-mode 1)
-            (scroll-bar-mode 1)))
+      (scroll-bar-mode 1)))
 (setq make-backup-files nil)
 
 ;; Confirm if kill emacs
@@ -56,8 +56,9 @@
 (setq initial-scratch-message nil)
 
 ;; Disable custom prompt
-(setq custom-prompt-themes t)
 
+(unless (file-exists-p "~/.emacs.d/.cache")
+  (make-directory "~/.emacs.d/.cache"))
 (setq savehist-file "~/.emacs.d/.cache/history")
 (setq recentf-save-file "~/.emacs.d/.cache/recentf")
 (setq projectile-bookmarks-file "~/.emacs.d/.cache/projectile-bookmarks.eld")
@@ -85,7 +86,17 @@
       (init-gc-cons-threshold (* 128 1024 1024)))
   (setq gc-cons-threshold init-gc-cons-threshold)
   (add-hook 'emacs-startup-hook
-	                (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+	    (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+
+;; Transparent
+(if (display-graphic-p)
+    (progn
+      (set-frame-parameter (selected-frame) 'alpha '(80 . 50))
+       (add-to-list 'default-frame-alist '(alpha . (80 . 50))))
+  )
+
+
+
 
 (provide 'init-options)
 ;;; init-options.el ends here

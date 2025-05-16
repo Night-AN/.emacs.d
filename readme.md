@@ -1,1 +1,1 @@
-= SHAW's emacs configuration
+# SHAW's emacs configuration

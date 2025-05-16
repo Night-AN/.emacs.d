@@ -15,9 +15,7 @@
   :ensure t
   :init (amx-mode)
   :config
-  (unless (file-exists-p "~/.emacs.d/.cache")
-    (make-directory "~/.emacs.d/.cache"))
-  ((setq amx-save-file "~/.emacs.d/.cache/amx-items")
+  (setq amx-save-file "~/.emacs.d/.cache/amx-items")
   )
 
 ;; Switch window
@@ -35,8 +33,9 @@
 ;; mode-line
 (use-package smart-mode-line
   :ensure t
-  :init (sml/setup)
-  (setq sml/no-confirm-load-theme nil)
+  :init
+  (setq sml/no-confirm-load-theme t)
+  (sml/setup)
   (setq sml/theme 'light)
   )
 
@@ -80,6 +79,19 @@
 			  (projects . 10)))
   (dashboard-setup-startup-hook)
   )
+
+;;theme solarized-light
+(use-package solarized-theme
+  :ensure t
+  :config
+  (load-theme 'solarized-light t)
+  )
+
+;;EVIL
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 0))
 
 (provide 'init-enhance)
 ;;; init-enhance.el ends here

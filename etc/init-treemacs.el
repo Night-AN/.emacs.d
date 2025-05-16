@@ -24,10 +24,6 @@
   (:map treemacs-mode-map
 	("/" . treemacs-advanced-helpful-hydra))
   :config
-  ;; Ensure the .cache directory exists
-  (unless (file-exists-p "~/.emacs.d/.cache")
-    (make-directory "~/.emacs.d/.cache"))
-
   ;; Set treemacs-persist file location
   (setq treemacs-persist-file "~/.emacs.d/.cache/treemacs-persist")
   )

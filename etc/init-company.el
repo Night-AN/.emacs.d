@@ -59,20 +59,35 @@
 
 (use-package lsp-mode
   :ensure t
+  :commands (lsp lsp-deferred)
   :init
   (setq lsp-keymap-prefix "C-c l")
   (setq lsp-enable-snippet t)
   :hook
-  ((java-mode . lsp))
+  ((java-mode . lsp)
+   (cmake-mode . lsp-deferred))
   )
 
 (use-package lsp-java
   :ensure t
-  :hook (java-mode . lsp)
   :config
   (setq lsp-java-server-install-dir "~/.emacs.d/.cache/jdt-language-server-latest/")
  ;;(setq lsp-java-jdt-download-url "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
   )
+
+(use-package cmake-mode
+  :ensure t
+  :mode ("CMakeLists\\.txt\\'" "\\.cmake\\'")
+  :hook (
+         (cmake-mode . cmake-font-lock-activate)
+         ))
+
+(use-package cmake-font-lock
+  :ensure t
+  :after cmake-mode
+  :config (cmake-font-lock-activate)
+  )
+  
 
 (use-package flycheck
   :ensure t
